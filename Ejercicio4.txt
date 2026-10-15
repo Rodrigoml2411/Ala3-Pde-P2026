@@ -1,0 +1,38 @@
+EJERCICIO 4:Explica en un texto, con ejemplos y fundamentación qué características de la OOP utilizaste para resolver 
+los programas de los Ejercicios 2 y 3. Si hay alguna que no utilizaste o no implementaste, indica cuál y por qué 
+crees que no fue necesario.
+
+
+
+En los programas del Ejercicio 3 utilicé objetos para representar las tareas y un gestor para organizar las operaciones 
+sobre ellas. Como la solución está limitada a la programación orientada a objetos basada en prototipos, no definí clases 
+con la palabra clave class: utilicé funciones constructoras y prototipos.
+
+Por ejemplo, la función constructora Tarea recibe los datos de una tarea 
+(título, descripción, dificultad, estado y fecha de creación) y los asigna a this. Al crear una tarea con new 
+ModeloTarea.Tarea(...), cada objeto conserva sus propios datos. De esta forma, las tareas se representan 
+como entidades independientes.
+
+También usé abstracción y organización de responsabilidades con GestorTareas. El gestor mantiene una colección 
+de tareas y ofrece operaciones como agregar, buscarPorTitulo y filtrarPorEstado. Así, el programa principal solicita 
+esas operaciones sin tener que implementar directamente cómo se recorre o modifica la colección. Por ejemplo, para 
+buscar una tarea se llama a gestorTareas.buscarPorTitulo(titulo), en lugar de repetir la búsqueda en cada parte del menú.
+
+La reutilización de comportamiento se realiza mediante el prototipo. Las funciones estaLleno, agregar, obtenerTodas, 
+filtrarPorEstado y buscarPorTitulo se asignan a GestorTareas.prototype. Todas las instancias del gestor pueden utilizar 
+esos mismos métodos, en vez de crear una copia de cada función por instancia. Dentro de los métodos, this se refiere al 
+gestor que recibió la llamada y permite acceder a su colección de tareas.
+
+El encapsulamiento se aplica solo parcialmente. El estado y las operaciones están agrupados en el gestor, pero la 
+propiedad tareas no está realmente oculta: su tipo permite acceder a ella desde fuera. Por eso, la protección del 
+estado depende de usar las operaciones del gestor como interfaz y no de una restricción estricta del lenguaje.
+
+No implementé una jerarquía de herencia entre tipos propios, como una clase TareaEspecial que herede de Tarea, ni 
+sobrescritura de métodos para lograr polimorfismo. Aunque JavaScript utiliza prototipos para compartir comportamiento 
+y buscar propiedades, el programa solo necesita tareas con los mismos campos y un único gestor. Crear subtipos o varias 
+implementaciones intercambiables habría agregado complejidad sin aportar una función necesaria al menú.
+
+En resumen, utilicé objetos, funciones constructoras, this, abstracción de operaciones, organización 
+del estado y reutilización mediante prototipos. La herencia entre entidades y el polimorfismo no se desarrollaron 
+porque los requisitos del programa no los necesitaban; el encapsulamiento existe como organización, pero no como 
+ocultamiento estricto de los datos.

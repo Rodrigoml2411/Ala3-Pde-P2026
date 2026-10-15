@@ -1,0 +1,82 @@
+------------------------------------------------------------------------------------------
+Anotación: 
+Desde la carpeta raíz del proyecto, ejecuta primero la compilación de TypeScript y 
+después el programa:
+
+npm run build:ts
+npm run start:ts
+
+start:ts ejecuta el archivo compilado en Ala.js. 
+El comando node Ala.js falla porque el archivo no está en la raíz.
+-----------------------------------------------------------------------------------------
+
+
+EJERCICIO 1:Considera el lenguaje JavaScript acotado al paradigma de programación orientada a 
+objetos basado en prototipos y analízalo en términos de los cuatro componentes de un paradigma mencionados por Kuhn.
+1. Generalización simbólica: ¿Cuáles son las reglas escritas del lenguaje?
+2. Creencias de los profesionales: ¿Qué características particulares del lenguaje se cree que sean "mejores" 
+que en otros lenguajes?
+
+
+
+Para analizar JavaScript desde el paradigma de la programación orientada a objetos basada en prototipos, podemos
+relacionar sus características con los componentes que Thomas Kuhn identifica en un paradigma científico. Estos 
+componentes permiten comprender las reglas, las creencias, los valores y los ejemplos prácticos compartidos por 
+una comunidad de profesionales.
+
+
+1. Generalización simbólica: ¿Cuáles son las reglas escritas del lenguaje?
+
+Las generalizaciones simbólicas son las reglas, expresiones y estructuras formales que los profesionales de una
+disciplina utilizan para describir y resolver problemas.
+
+En JavaScript, dentro de la programación orientada a objetos basada en prototipos, podemos identificar las siguientes reglas:
+
+Objetos: son estructuras que permiten agrupar propiedades y métodos. Por ejemplo, un objeto puede representar a una
+persona con atributos como nombre y métodos como saludar().
+
+Prototipos: los objetos pueden heredar propiedades y métodos de otros objetos mediante una cadena de prototipos.
+
+Herencia prototípica: un objeto puede utilizar comportamientos definidos en otro objeto sin necesidad de pertenecer
+a una clase tradicional.
+
+Funciones constructoras: permiten crear objetos y establecer su prototipo mediante la propiedad prototype.
+
+Palabra clave this: hace referencia al contexto de ejecución de una función, cuyo valor depende de cómo se invoca, salvo
+casos particulares como las funciones flecha.
+
+Clases de JavaScript: la sintaxis class, incorporada en ECMAScript 2015, ofrece una forma más familiar de definir objetos
+y relaciones de herencia, pero se basa en el sistema de prototipos.
+
+
+2. Creencias de los profesionales: ¿Qué características se consideran mejores que en otros lenguajes?
+
+Las creencias de los profesionales son las ideas compartidas por una comunidad acerca de las ventajas, fortalezas y formas
+preferibles de trabajar dentro de un paradigma.
+
+En JavaScript, quienes valoran la programación orientada a objetos basada en prototipos suelen destacar las siguientes características:
+
+Flexibilidad: los objetos pueden modificarse durante la ejecución, agregando, eliminando o cambiando propiedades y métodos.
+
+Reutilización de código: mediante la herencia prototípica, distintos objetos pueden compartir comportamientos sin duplicar 
+su implementación.
+
+Menor dependencia de jerarquías rígidas: a diferencia de los modelos de clases tradicionales, los prototipos permiten 
+establecer relaciones entre objetos de forma más directa y flexible.
+
+Simplicidad para crear objetos: es posible crear objetos mediante literales y utilizar Object.create() 
+sin definir previamente una clase.
+
+Adaptabilidad: se pueden modificar comportamientos y extender objetos de acuerdo con las necesidades de una aplicación.
+
+Integración con la web: JavaScript se ejecuta de forma nativa en los navegadores y permite desarrollar interfaces 
+interactivas, además de utilizarse en entornos de servidor como Node.js.
+
+Estas características se consideran ventajas en determinados contextos, especialmente cuando se necesita flexibilidad y 
+rapidez de desarrollo. Sin embargo, no significa que JavaScript sea necesariamente superior a otros lenguajes: las ventajas 
+dependen del problema que se quiera resolver y de las necesidades del proyecto.
+
+
+EJERCICIO 4:
+
+
